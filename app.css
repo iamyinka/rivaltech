@@ -21,7 +21,7 @@ img {
 }
 
 .container {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -53,6 +53,12 @@ img {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+  transition: all 0.3s ease-in;
+}
+
+.header nav li:last-child:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .header ul {
@@ -75,11 +81,7 @@ img {
   letter-spacing: 0.12rem;
 }
 
-.header nav a:hover {
-  transform: translateY(50px);
-}
-
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .container {
     width: 100%;
     padding: 0 2rem;
