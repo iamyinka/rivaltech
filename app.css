@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.7;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+#logo img {
+  width: 7rem;
+  height: auto;
+}
+
+/* #logo {
+  flex: 1;
+}
+
+.header nav {
+  flex: 2;
+} */
+
+/* .header nav {
+  background: purple;
+} */
+
+.header nav li {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 2rem;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  background-color: orange;
+  padding: 1.2rem 1.5rem;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  max-width: max-content;
+  letter-spacing: 0.12rem;
+}
+
+.header nav a:hover {
+  transform: translateY(50px);
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.timeline {
+  position: relative;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px; /* Adjust based on your desired horizontal offset */
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #ddd;
+}
+
+/* Each timeline item */
+.timeline-item {
+  position: relative;
+  margin: 1.5rem 0;
+  padding-left: 40px; /* Create space for the line + dot */
+}
+
+/* The dot marker for each item (use ::before on the item itself) */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 1px; /* Make sure this lines up with .timeline::before */
+  top: 0.2rem; /* Adjust to center vertically relative to text */
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Optional styling for the time and content */
+.timeline-time {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsiveness: 
+     If you have narrower screens, adjust spacing/ fonts via media queries */
+@media screen and (max-width: 600px) {
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item::before {
+    left: 10px;
+  }
+}
